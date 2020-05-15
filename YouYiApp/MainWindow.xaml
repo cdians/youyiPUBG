@@ -1,0 +1,102 @@
+﻿<pu:WindowX x:Class="YouYiApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:local="clr-namespace:YouYiApp"
+        xmlns:c="clr-namespace:YouYiApp.common"
+        mc:Ignorable="d"
+        Height="450" 
+        Width="800"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        BorderThickness="0"
+        pu:WindowXCaption.Header=" " 
+        pu:WindowXCaption.Background="#191919">
+    <Grid Background="#191919">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Background="#191919"
+                  Margin="0,-35,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Image Source="/YouYiApp;component/Resources/YY3.png" Margin="-212,-102,-220,222" Grid.RowSpan="2"/>
+                <TreeView Grid.Row="1"
+                          Background="Transparent"
+                          pu:TreeViewHelper.ItemHeight="40"
+                          pu:TreeViewHelper.TreeViewStyle="Classic"
+                          pu:TreeViewHelper.SelectedBackground="#27282A"
+                          BorderBrush="#27282A"
+                          Foreground="#C4C4C4">
+                    <TreeViewItem Header="基础设置"
+                                    FontSize="23"
+                                    IsSelected="True"
+                                    Padding="10,0,0,0"
+                                    pu:TreeViewHelper.ItemIcon="&#xf015;">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Selected">
+                                <c:EventCommand Command="{Binding Path=DataContext.ChangeUserControlCom, 
+                                    RelativeSource={RelativeSource AncestorType={x:Type TreeViewItem}}}" 
+                                    CommandParameter="jichu"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TreeViewItem>
+                    <TreeViewItem Header="按键设置"
+                                    FontSize="23"
+                                    Padding="10,0,0,0"
+                                    pu:TreeViewHelper.ItemIcon="&#xf0f7;">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Selected">
+                                <c:EventCommand Command="{Binding Path=DataContext.ChangeUserControlCom, 
+                                    RelativeSource={RelativeSource AncestorType={x:Type TreeViewItem}}}" 
+                                    CommandParameter="anjian"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TreeViewItem>
+                    <TreeViewItem Header="弹道调试"
+                                    FontSize="23"
+                                    Padding="10,0,0,0"
+                                    pu:TreeViewHelper.ItemIcon="&#xf05b;">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Selected">
+                                <c:EventCommand Command="{Binding Path=DataContext.ChangeUserControlCom, 
+                                    RelativeSource={RelativeSource AncestorType={x:Type TreeViewItem}}}" 
+                                    CommandParameter="dandao"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TreeViewItem>
+                <TreeViewItem Header="最小化驱动"
+                                    FontSize="23"
+                                    Padding="10,0,0,0"
+                                    pu:TreeViewHelper.ItemIcon="&#xf010;">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Selected">
+                            <c:EventCommand Command="{Binding Path=DataContext.ChangeUserControlCom, 
+                                    RelativeSource={RelativeSource AncestorType={x:Type TreeViewItem}}}" 
+                                    CommandParameter="zuixiaohua"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                </TreeView>
+                <StackPanel Margin="30,246,0,10" Grid.Row="1" Orientation="Vertical">
+                    <TextBlock Text="当前分辨率" Foreground="#C4C4C4" FontSize="15"/>
+                    <TextBlock Text="{Binding FenBianLv}" Foreground="#FE4543" FontSize="15"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <ContentControl Content="{Binding CurrentView}" />
+            </Grid>
+        </Grid>
+    </Grid>
+</pu:WindowX>

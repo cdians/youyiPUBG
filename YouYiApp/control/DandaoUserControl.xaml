@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="YouYiApp.control.DandaoUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
+             xmlns:local="clr-namespace:YouYiApp.control"
+             xmlns:c="clr-namespace:YouYiApp.common"
+             mc:Ignorable="d" >
+    <StackPanel Background="#191919">
+        <Grid Height="50" Background="#27282A" >
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Text="弹道设置" FontSize="25" Foreground="#DCDCDC" Block.TextAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+        <StackPanel Margin="15">
+            <TextBlock Text="说明：识别成功后修改对应的弹道即可生效" FontSize="16" Foreground="#808080"/>
+            <TextBlock TextWrapping="Wrap" Text="小技巧：射击的时候，如果子弹不稳，马上停下来切换到驱动界面，文字变绿色的地方就是你现在正在射击的弹道段，你可以考虑直接修改它。" FontSize="16" Foreground="#808080"/>
+            <TextBlock TextWrapping="Wrap" Text="（如果手速慢，停下来的不及时，也有可能会错过不稳的弹道段，所以可以考虑修改前一段）" FontSize="16" Foreground="#808080"/>
+        </StackPanel>
+        <Grid VerticalAlignment="Top" Margin="10,0,10,0">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="武器位：" FontSize="20" Foreground="#A9A9A9"/>
+                    <TextBlock Text="{Binding WeaponSort}" FontSize="20" Foreground="#FE4543"/>
+                    <TextBlock Text="姿势：" FontSize="20" Foreground="#A9A9A9" Margin="30,0,0,0"/>
+                    <TextBlock Text="{Binding Position}" FontSize="20" Foreground="#FE4543"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="枪械名称：" FontSize="20" VerticalAlignment="Center" Foreground="#A9A9A9"/>
+                    <TextBlock Text="{Binding WeaponName}" FontSize="20" Foreground="#FE4543"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="倍镜：" FontSize="20" Foreground="#A9A9A9"/>
+                    <TextBlock Text="{Binding Scope}" FontSize="20" Foreground="#FE4543"/>
+                    <TextBlock Text="枪口：" FontSize="20" Margin="30,0,0,0" Foreground="#A9A9A9"/>
+                    <TextBlock Text="{Binding Qiangkou}" FontSize="20" Foreground="#FE4543"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="握把：" FontSize="20" Foreground="#A9A9A9"/>
+                    <TextBlock Text="{Binding WoBa}" FontSize="20" Foreground="#FE4543"/>
+                    <TextBlock Text="枪托：" FontSize="20" Margin="30,0,0,0" Foreground="#A9A9A9"/>
+                    <TextBlock Text="{Binding QiangTuo}" FontSize="20" Foreground="#FE4543"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="30" Margin="0,0,0,5">
+                    <TextBlock FontSize="20" Foreground="#A9A9A9" VerticalAlignment="Center" Text="基础数据：" />
+                    <ItemsControl ItemsSource="{Binding Datas}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBox  Text="{Binding Path=Num, UpdateSourceTrigger=PropertyChanged}" Width="50" Margin="0,5,10,0" FontSize="20" 
+                                      Foreground="{Binding Path=Index, Converter={StaticResource TextBoxConverter}}" input:InputMethod.IsInputMethodEnabled="False">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="TextChanged">
+                                            <c:EventCommand Command="{Binding Path=DataContext.ValueChange, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                    <i:Interaction.Behaviors>
+                                        <c:TextBoxInputRegExBehaviour RegularExpression="^\d+$" MaxLength="3" EmptyValue="0" />
+                                    </i:Interaction.Behaviors>
+                                </TextBox>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+                
+            </StackPanel>
+        </Grid>
+
+    </StackPanel>
+</UserControl>

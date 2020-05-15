@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
+  <Costura CreateTemporaryAssemblies="false"
+           IncludeDebugSymbols="false">
+	  <PreloadOrder>
+		  DevIL
+		  ILU
+	  </PreloadOrder>
+    <!-- 托管dll -->
+    <ExcludeAssemblies>
+		
+		</ExcludeAssemblies>
+			<!-- 非托管dll -->
+			<Unmanaged32Assemblies>
+			sqlite3
+			youyi
+			sqlcipher
+			ML
+		</Unmanaged32Assemblies>
+    
+  </Costura>
+</Weavers>
