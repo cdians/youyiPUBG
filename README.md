@@ -35,3 +35,6 @@
 # **另外！**
 本软件不得用于商业用途，仅做学习交流使用
 交流群：876806706
+
+免芯片版本 [link](https://www.lanzous.com/id44b9g)
+飞易来6.4版本 [link](https://www.lanzous.com/id44b8f)
