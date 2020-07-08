@@ -36,5 +36,7 @@
 本软件不得用于商业用途，仅做学习交流使用
 交流群：876806706
 
-免芯片版本 [link](https://www.lanzous.com/id44b9g)
+V3.0新版本：
+免芯片驱动下载地址 [link](https://wws.lanzous.com/i4Xgdeepy6d)
+
 飞易来6.4版本 [link](https://www.lanzous.com/id44b8f)
