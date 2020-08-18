@@ -50,6 +50,6 @@
 交流群：876806706
 
 # **V3.1.2新版本：**
-免芯片3.1.1驱动下载地址 [link](https://wws.lanzous.com/iUtVafpa3be)
-
-飞易来6.4版本3.0驱动下载地址 [link](https://wws.lanzous.com/ij83nefzfyd)
+免芯片3.1.2驱动下载地址 [link](https://www.lanzoux.com/ihWpNfrdzsd)
+飞易来6.4版本3.1.2驱动下载地址 [link](https://www.lanzoux.com/i2xgifre0ef)
+飞易来6.0快速版本3.1.2驱动下载地址 [link](https://www.lanzoux.com/i2Bxufre00b)
