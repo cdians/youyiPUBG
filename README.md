@@ -24,11 +24,11 @@
 - [x] 弹道调节
 - [x] 2W+弹道数据
 
-![avatar](https://s1.ax1x.com/2020/07/09/UearjJ.png)
-![avatar](https://s1.ax1x.com/2020/07/09/UeaDc4.png)
-![avatar](https://s1.ax1x.com/2020/07/09/UeadhT.png)
-![avatar](https://s1.ax1x.com/2020/07/09/Uea09U.png)
-![avatar](https://s1.ax1x.com/2020/07/09/UeaB3F.png)
+![avatar](https://s1.ax1x.com/2020/08/18/duOYgH.png)
+![avatar](https://s1.ax1x.com/2020/08/18/duOGCD.png)
+![avatar](https://s1.ax1x.com/2020/08/18/duOJ8e.png)
+![avatar](https://s1.ax1x.com/2020/08/18/duOtvd.png)
+![avatar](https://s1.ax1x.com/2020/08/18/duOUKA.png)
 
 具体效果演示见头条
 [link](https://m.toutiaoimg.cn/group/6820354437060493838/?app=news_article&timestamp=1589533908&group_id=6820354437060493838)
@@ -49,7 +49,7 @@
 本软件不得用于商业用途，仅做学习交流使用
 交流群：876806706
 
-# **V3.0新版本：**
+# **V3.1.2新版本：**
 免芯片3.1.1驱动下载地址 [link](https://wws.lanzous.com/iUtVafpa3be)
 
 飞易来6.4版本3.0驱动下载地址 [link](https://wws.lanzous.com/ij83nefzfyd)
